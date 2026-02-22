@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Job Application Tracker</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- DaisyUI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.14/dist/full.min.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="min-h-screen bg-base-200 text-base-content">
+  <main class="mx-auto max-w-5xl px-4 py-8">
+    <!-- Header -->
+    <div class="flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+      <div>
+        <h1 class="text-2xl font-bold tracking-tight">Job Application Tracker</h1>
+      </div>
+    </div>
+
+    <!-- Dashboard Cards -->
+    <section class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+      <div class="card bg-base-100 shadow">
+        <div class="card-body p-5">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-xs text-base-content/60">Total</p>
+              <p class="mt-1 text-3xl font-bold" id="totalCount">0</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow">
+        <div class="card-body p-5">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-xs text-base-content/60">Interview</p>
+              <p class="mt-1 text-3xl font-bold text-success" id="interviewCount">0</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+      <div class="card bg-base-100 shadow">
+        <div class="card-body p-5">
+          <div class="flex items-start justify-between">
+            <div>
+              <p class="text-xs text-base-content/60">Rejected</p>
+              <p class="mt-1 text-3xl font-bold text-error" id="rejectedCount">0</p>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Available Jobs -->
+    <section class="mt-6">
+      <div class="card bg-base-100 shadow">
+        <div class="card-body p-5">
+          <!-- Title row -->
+          <div class="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <div>
+              <h2 class="text-base font-bold">Available Jobs</h2>
+            </div>
+
+            <div class="text-sm text-base-content/70">
+              <span class="font-semibold text-base-content" id="headerJobsCount">0</span> jobs
+            </div>
+          </div>
+
+          <!-- Tabs -->
+          <div class="mt-4">
+            <div role="tablist" class="tabs tabs-boxed w-fit gap-2">
+              <button role="tab" class="tab tab-btn tab-active px-5" data-tab="all">All</button>
+              <button role="tab" class="tab tab-btn px-5" data-tab="interview">Interview</button>
+              <button role="tab" class="tab tab-btn px-5" data-tab="rejected">Rejected</button>
+            </div>
+          </div>
+
+          <!-- List -->
+          <div id="jobsList" class="mt-5 space-y-4"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+
+</html>
