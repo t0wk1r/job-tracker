@@ -18,3 +18,6 @@ Ans : Event Bubbling means When you click on a child element,
 Ans : Event Delegation means Instead of sending events to many children Giving an event to the parent once. Because through bubbling, the parent can understand which child has been clicked.
 
 5. What is the difference between preventDefault() and stopPropagation() methods?
+
+Ans : preventDefault() stops the default action.
+stopPropagation() stops the event bubbling.
