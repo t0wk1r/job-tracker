@@ -1,10 +1,8 @@
 1. What is the difference between getElementById, getElementsByClassName, and querySelector / querySelectorAll?
 
-Ans : getElementById = Unique ID
-      getElementsByClassName = selector as html class
-      querySelector = select first selector ()
-
-
+Ans : getElementById retrieves a single element by an ID.
+      getElementsByClassName retrieves multiple elements by class.
+      querySelector retrieves the first matching element, and querySelectorAll retrieves all matching elements.
 
 2. How do you create and insert a new element into the DOM?
 Ans : let div = document.createElement("div");
